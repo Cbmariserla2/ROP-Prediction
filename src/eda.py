@@ -1,10 +1,3 @@
-"""
-eda.py
-------
-Exploratory Data Analysis on the cleaned drilling dataset.
-Generates summary statistics (CSV) and key plots (PNG) into reports/figures/.
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib

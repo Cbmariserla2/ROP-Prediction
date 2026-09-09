@@ -1,10 +1,3 @@
-"""
-train_models.py
-----------------
-Trains Linear Regression, Random Forest, and XGBoost regressors to predict
-ROP from drilling parameters. Saves fitted models + scaler + metrics.
-"""
-
 import pandas as pd
 import numpy as np
 import json
@@ -66,6 +59,7 @@ def main():
     predictions = {"y_test": y_test.reset_index(drop=True)}
 
     # --- 1. Linear Regression ---
+    
     lr = LinearRegression()
     lr.fit(X_train_scaled, y_train)
     res, preds = evaluate(lr, X_test_scaled, y_test, "Linear Regression")
@@ -74,6 +68,7 @@ def main():
     joblib.dump(lr, MODELS_DIR / "linear_regression.joblib")
 
     # --- 2. Random Forest (small grid search) ---
+
     # min_samples_leaf is capped to keep tree sizes (and the saved model
     # file) reasonable while still getting strong accuracy.
     rf_param_grid = {

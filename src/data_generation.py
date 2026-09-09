@@ -1,34 +1,3 @@
-"""
-data_generation.py
--------------------
-Generates a physics-informed SYNTHETIC drilling dataset that mirrors the
-schema of the Equinor Volve public dataset (WOB, RPM, flow rate, torque,
-mud weight, depth, formation type -> ROP).
-
-WHY SYNTHETIC:
-The real Volve dataset is distributed by Equinor via their own data
-portal / Azure blob storage, which is not reachable from this build
-environment. This script lets the rest of the pipeline (EDA, modeling,
-dashboard) run end-to-end immediately.
-
-TO USE REAL VOLVE DATA INSTEAD:
-1. Download the Volve dataset from Equinor's disclosure portal:
-   https://www.equinor.com/energy/volve-data-sharing
-   (Drilling reports / WITSML / mud logs are under the "Drilling" folder)
-2. Extract the relevant depth-indexed drilling parameters (WOB, RPM,
-   SPP/flow rate, torque, mud weight, bit depth, formation tops) into a
-   single CSV with the SAME COLUMN NAMES used below (see COLUMNS list).
-3. Save it as data/raw/drilling_data_raw.csv, replacing the synthetic file.
-   No other script needs to change.
-
-The synthetic generator uses a Bourgoyne & Young-style ROP model (the
-classic 8-parameter drilling model used throughout petroleum engineering)
-plus realistic noise, formation-dependent drillability, bit wear over
-depth, and correlated (non-independent) drilling parameters, so the
-resulting dataset behaves like real field data rather than pure random
-noise.
-"""
-
 import numpy as np
 import pandas as pd
 from pathlib import Path

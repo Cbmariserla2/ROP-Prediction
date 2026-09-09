@@ -1,21 +1,3 @@
-"""
-data_preprocessing.py
-----------------------
-Cleans and merges raw drilling parameters into a modeling-ready dataset.
-
-Steps:
-1. Load raw CSV.
-2. Drop exact duplicate rows.
-3. Handle missing values (median imputation per well, since values are
-   depth-continuous and should be locally interpolated rather than
-   globally imputed).
-4. Remove physically impossible outliers (domain-based clipping).
-5. Encode categorical Formation column.
-6. Feature engineering: Mechanical Specific Energy (MSE) — a standard
-   drilling-efficiency metric — and normalized bit wear.
-7. Save cleaned dataset to data/processed/.
-"""
-
 import pandas as pd
 import numpy as np
 from pathlib import Path

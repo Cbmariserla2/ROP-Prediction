@@ -1,10 +1,3 @@
-"""
-evaluate.py
------------
-Generates model comparison plots: predicted vs actual ROP for each model,
-residual plots, and a feature importance bar chart.
-"""
-
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
