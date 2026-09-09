@@ -61,7 +61,7 @@ st.caption(
 )
 
 tab1, tab2, tab3, tab4 = st.tabs(
-    ["📊 Model Performance", "🎯 Predicted vs Actual", "🔑 Feature Importance", "🧮 What-If Predictor"]
+    ["Model Performance", "Predicted vs Actual", "Feature Importance", "What-If Predictor"]
 )
 
 # ---------------- Tab 1: Model performance ----------------
@@ -159,7 +159,3 @@ with tab4:
     )
 
 st.divider()
-st.caption(
-    "Built on a synthetic, physics-informed drilling dataset styled after the Volve field "
-    "(see README for how to plug in the real Equinor Volve dataset)."
-)
