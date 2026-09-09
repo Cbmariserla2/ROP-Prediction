@@ -130,7 +130,7 @@ The Streamlit app (`app/streamlit_app.py`) has four tabs:
    weight, depth, bit wear, and formation; live ROP prediction from the
    trained XGBoost model.
 
-![Project Result](images/project-result.png)
+![Project Result](reports\figures\Dashboard_whatif.png)
 
 ## Notes / limitations
 
