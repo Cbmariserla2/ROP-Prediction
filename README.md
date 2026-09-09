@@ -4,7 +4,7 @@ End-to-end drilling-optimization project: clean drilling parameters →
 EDA → train Linear Regression / Random Forest / XGBoost → evaluate →
 identify influential parameters → interactive Streamlit dashboard.
 
-## ⚠️ About the dataset (read this first)
+## About the dataset
 
 This project was built to run against the **Equinor Volve** public
 drilling dataset, but that dataset is distributed through Equinor's own
