@@ -1,0 +1,16 @@
+[
+  "WOB_klbs",
+  "RPM",
+  "Flow_Rate_gpm",
+  "Torque_kftlbs",
+  "Mud_Weight_ppg",
+  "Depth_m",
+  "Bit_Hours",
+  "MSE_psi",
+  "Formation_Chalk",
+  "Formation_Claystone",
+  "Formation_Dolomite",
+  "Formation_Limestone",
+  "Formation_Sandstone",
+  "Formation_Shale"
+]
